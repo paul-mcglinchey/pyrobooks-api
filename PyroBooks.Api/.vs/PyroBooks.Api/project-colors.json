@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4c79481f-03a3-48c0-948d-3850a69243c0": {
+      "ProjectGuid": "4c79481f-03a3-48c0-948d-3850a69243c0",
+      "DisplayName": "PyroBooks.Api",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
