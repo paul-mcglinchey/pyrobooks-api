@@ -57,8 +57,8 @@ jobs:
         run: dotnet build ${{ env.AZURE_FUNCTION_PROJ_PATH }} --configuration Release
       
       - name: Install Azure Functions Core Tools
-        run: npm i -g azure-functions-core-tools@2 --unsafe-perm true
+        run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
       
       - name: Publish Azure Function App
-        run: func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }}
+        run: func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }} --force
         working-directory: ${{ env.AZURE_FUNCTION_PROJ_PATH }}
