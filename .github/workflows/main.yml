@@ -1,13 +1,13 @@
 name: Test and Deploy (Functions Core Tooling)
 
 on:
-  #push:
-  #  branches: [ main ]
-  #  paths-ignore: 
-  #    - '**/README.md'
-  #    - '**/*.yml'
-  #pull_request:
-  #  branches: [ main ]
+  push:
+    branches: [ main ]
+    paths-ignore: 
+      - '**/README.md'
+      - '**/*.yml'
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
   
 env:
@@ -23,7 +23,7 @@ jobs:
       - name: Authenticate to Azure as a Service Principal
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+          creds: ${{ secrets.AZURE_CREDS_FUNCTION_APP }}
     
       - name: Get the latest source code commit
         uses: actions/checkout@v2        
